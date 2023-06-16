@@ -1,0 +1,33 @@
+
+.btn-group{
+    display: flex;
+    gap:1rem;
+    margin-top: 2rem;
+}
+
+.yellow-btn{
+display: inline-block;
+font-size: 1.4rem;
+padding: 1rem 2rem;
+background: #FFD60A;
+box-shadow: inset -2px -2px 0px rgba(255, 255, 255, 0.51);
+border-radius: 8px;
+text-align: center;
+cursor: pointer;
+}
+.black-btn{
+display: inline-block;
+font-size: 1.4rem;
+font-weight:500;
+padding: 1rem 2rem;
+background: #161D29;
+color:#fff;
+box-shadow: inset -2px -2px 0px rgba(255, 255, 255, 0.18);
+border-radius: 8px;
+cursor: pointer;
+text-align: center;
+}
+.yellow-btn:hover,.black-btn:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
