@@ -7,7 +7,7 @@
 
 .yellow-btn{
 display: inline-block;
-font-size: 1.4rem;
+font-size: 1.1rem;
 padding: 1rem 2rem;
 background: #FFD60A;
 box-shadow: inset -2px -2px 0px rgba(255, 255, 255, 0.51);
@@ -17,7 +17,7 @@ cursor: pointer;
 }
 .black-btn{
 display: inline-block;
-font-size: 1.4rem;
+font-size: 1.1rem;
 font-weight:500;
 padding: 1rem 2rem;
 background: #161D29;

@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Link } from "react-router-dom";
+import { TypeAnimation } from 'react-type-animation';
 import "../Pages.css/Home.css";
+import ExploreMore from "../Components/HomePage/ExploreMore";
 import ButtonGroup from "../Components/HomePage/ButtonGroup";
 import video from "../assets/Images/banner.mp4";
-import users from "../assets/icons/users.png";
-import user from "../assets/icons/user.png";
 import frame from "../assets/Images/frame.png";
-// import transImage from "../assets/icons/transparent-zigzag.png";
 import Leadership from "../assets/icons/leadership.png";
 import Responsibility from "../assets/icons/responsibility.png";
 import Flexibility from "../assets/icons/flexibility.png";
@@ -26,7 +25,6 @@ import reviewboy3 from "../assets/Images/review-boy3.png";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-// import './owl.css';
 import Footer from "../Components/common/Footer.js";
 
 const Home = () => {
@@ -54,12 +52,17 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="button-group">
-        <ButtonGroup
-          YellowButtonText="Learn More"
-          YellowButtonLink="/signup"
-          BlackButtonText="Book a Demo"
-          BlackButtonLink="/login"
+      <div className="btn-group">
+        < ButtonGroup
+          btnText={"Learn More"}
+          btnLink={"/signup"}
+          btnColor={"yellow-btn"}
+        />
+
+        < ButtonGroup
+          btnText={"Book a Demo"}
+          btnLink={"/login"}
+          btnColor={"black-btn"}
         />
       </div>
 
@@ -67,6 +70,12 @@ const Home = () => {
         <video src={video} autoPlay loop muted />
       </div>
 
+
+      <TypeAnimation
+            repeat={Infinity}
+            cursor={true}
+            omitDeletionAnimation={true}
+            sequence={[
       <div className="coding-section">
         <div className="coding-content">
           <h2>
@@ -79,13 +88,19 @@ const Home = () => {
             knowledge with you.
           </p>
 
-          <div className="button-group">
-            <ButtonGroup
-              YellowButtonText="Try it Yourself"
-              YellowButtonLink="/login"
-              // <GoArrowRight className='icon' />
-              BlackButtonText="Learn More"
-              BlackButtonLink="/signup"
+
+          <div className="btn-group">
+
+            < ButtonGroup
+              btnText={"Try it Yourself"}
+              btnLink={"/login"}
+              btnColor={"yellow-btn"}
+            />
+
+            < ButtonGroup
+              btnText={"Learn More"}
+              btnLink={"/signup"}
+              btnColor={"black-btn"}
             />
           </div>
         </div>
@@ -118,7 +133,8 @@ const Home = () => {
             <div>{`</nav>`}</div>
           </div>
         </div>
-      </div>
+      </div> ]} />
+
 
       <div className="coding-section extra">
         <div className="coding-content extra-content-css" style={{ order: 2 }}>
@@ -134,13 +150,18 @@ const Home = () => {
             you'll be writing real code from your very first lesson.
           </p>
 
-          <div className="button-group">
-            <ButtonGroup
-              YellowButtonText="Continue Lesson"
-              YellowButtonLink="/login"
-              // <GoArrowRight className='icon' />
-              BlackButtonText="Learn More"
-              BlackButtonLink="/signup"
+          <div className="btn-group">
+
+          < ButtonGroup
+              btnText={"Continue Lesson"}
+              btnLink={"/login"}
+              btnColor={"yellow-btn"}
+            />
+
+            < ButtonGroup
+              btnText={"Learn More"}
+              btnLink={"/signup"}
+              btnColor={"black-btn"}
             />
           </div>
         </div>
@@ -178,77 +199,27 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="code-power">
-        <h2>
-          Unlock the <span className="span">Power of Code</span>
-        </h2>
-        <p className="code-power-para">
-          Learn to Build Anything You Can Imagine
-        </p>
-        <div className="cards">
-          <div className="card card1">
-            <p className="para1">Learn HTML</p>
-            <p className="para2">
-              This course covers the basic concepts of HTML including creating
-              and structuring web pages, adding text, links, images, and more.
-            </p>
-
-            <div className="bottom">
-              <div className="left">
-                <img className="image" src={users} alt="users" />
-                <p>Beginner</p>
-              </div>
-              <div className="right">
-                <img className="image" src={user} alt="user" />
-                <p>6 Lessons</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="card card2">
-            <p className="para-a">Learn HTML</p>
-            <p className="para-b">
-              This course covers the basic concepts of HTML including creating
-              and structuring web pages, adding text, links, images, and more.
-            </p>
-
-            <div className="bottom">
-              <div className="left l-2">
-                <img className="image" src={users} alt="users" />
-                <p>Beginner</p>
-              </div>
-              <div className="right l-2">
-                <img className="image" src={user} alt="user" />
-                <p>6 Lessons</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="card card2 card3">
-            <p className="para-a">Learn HTML</p>
-            <p className="para-b">
-              This course covers the basic concepts of HTML including creating
-              and structuring web pages, adding text, links, images, and more.
-            </p>
-
-            <div className="bottom">
-              <div className="left l-1">
-                <img className="image" src={users} alt="users" />
-                <p>Beginner</p>
-              </div>
-              <div className="right l-1">
-                <img className="image" src={user} alt="user" />
-                <p>6 Lessons</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ExploreMore />
 
       <div className="parent-frame">
         <img className="frame" />
       </div>
 
+      <div className="btn-group"style={{position:"relative",top: "-18rem"}}>
+
+          < ButtonGroup
+              btnText={"Continue Lesson"}
+              btnLink={"/login"}
+              btnColor={"yellow-btn"}
+            />
+
+            < ButtonGroup
+              btnText={"Learn More"}
+              btnLink={"/signup"}
+              btnColor={"black-btn"}
+            />
+          </div>
+    
       <div
         className="white-bg demanded__section"
         style={{ background: "#F9F9F9", height: "auto", width: "100%" }}
@@ -272,6 +243,13 @@ const Home = () => {
                             YellowButtonLink="/signup"
                         />
                     </div>*/}
+             < ButtonGroup style={{border:"none"}}
+              btnText={"Try it Yourself"}
+              btnLink={"/login"}
+              btnColor={"yellow-btn"}
+            />  
+
+
           </div>
         </div>
 
