@@ -26,9 +26,13 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import Footer from "../Components/common/Footer.js";
+import LoginSignup from "../Components/common/LoginSignup";
 
 const Home = () => {
   return (
+<>
+    <LoginSignup/>
+
     <div className="Home-wrapper">
       {/* section2 */}
       <Link className="no-underline" to="/signup">
@@ -358,7 +362,7 @@ const Home = () => {
 
       <div className="Become_Instructor">
         <div className="instructor_image">
-          <img src={instructor} alt="instructor image" />
+          <img src={instructor} alt="instructor" />
         </div>
 
         <div className="instructor-content">
@@ -387,7 +391,7 @@ const Home = () => {
         <div className="item">
           <div className=" review-card">
             <div className="row-1">
-              <img src={reviewgirl} alt="girl-image" />
+              <img src={reviewgirl} alt="girl" />
               <div className="about-girl">
                 <h2>Cody Fisher</h2>
                 <p>tim.jennings@example.com</p>
@@ -417,7 +421,7 @@ const Home = () => {
         <div className="item">
           <div className=" review-card">
             <div className="row-1">
-              <img src={reviewboy1} alt="girl-image" />
+              <img src={reviewboy1} alt="boy" />
               <div className="about-girl">
                 <h2>Cody Fisher</h2>
                 <p>tim.jennings@example.com</p>
@@ -445,7 +449,7 @@ const Home = () => {
         <div className="item">
           <div className=" review-card">
             <div className="row-1">
-              <img src={reviewboy2} alt="girl-image" />
+              <img src={reviewboy2} alt="boy" />
               <div className="about-girl">
                 <h2>Cody Fisher</h2>
                 <p>tim.jennings@example.com</p>
@@ -473,7 +477,7 @@ const Home = () => {
         <div className="item">
           <div className=" review-card">
             <div className="row-1">
-              <img src={reviewboy3} alt="girl-image" />
+              <img src={reviewboy3} alt="boy" />
               <div className="about-girl">
                 <h2>Cody Fisher</h2>
                 <p>tim.jennings@example.com</p>
@@ -503,6 +507,8 @@ const Home = () => {
 
       <Footer />
     </div>
+
+    </>
   );
 };
 

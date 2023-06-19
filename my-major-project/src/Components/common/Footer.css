@@ -81,7 +81,7 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  align-items: start;
+  align-items: flex-start;
 }
 .footer-right {
   font-family: "Inter";
